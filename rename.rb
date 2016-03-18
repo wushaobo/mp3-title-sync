@@ -4,7 +4,7 @@ if ARGV.length != 1 and ARGV.length != 2
 	exit(-1)
 end
 
-files = Dir[File.join(ARGV[0], '**/*.mp3')]
+files = Dir.glob(File.join(ARGV[0], '**/*.mp3'), File::FNM_CASEFOLD)
 if files.length == 0
 	puts "No mp3 file found in #{ARGV[0]} ."
 	exit(0)
