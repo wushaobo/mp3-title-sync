@@ -1,7 +1,7 @@
 
 if ARGV.length != 2
 	puts "Usage: ruby rename.rb MP3_DIR_PATH FILE_NAME_PATTERN"
-	puts "	Example: ruby rename.rb /tmp/mp3/ '^.+(\d\-\d+).+\.mp3$'"
+	puts "	Example: ruby rename.rb /tmp/mp3/ '^.+(\\d\\d).+\.mp3$'"
 	puts "	    /tmp/mp3/XXXX1-002XXXX.mp3  ==>  /tmp/mp3/1-002.mp3"
 	exit(-1)
 end
